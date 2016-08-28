@@ -134,7 +134,7 @@ public class EarthquakeCityMap extends PApplet {
 	// TODO: Update this method as appropriate
 	private void addKey() {	
 		// Remember you can use Processing's graphics methods here
-		fill(255, 250, 240);
+		/*fill(255, 250, 240);
 		rect(25, 50, 150, 250);
 		
 		fill(0);
@@ -152,7 +152,60 @@ public class EarthquakeCityMap extends PApplet {
 		fill(0, 0, 0);
 		text("5.0+ Magnitude", 75, 125);
 		text("4.0+ Magnitude", 75, 175);
-		text("Below 4.0", 75, 225);
+		text("Below 4.0", 75, 225);*/
+		fill(255, 250, 240);
+		rect(25, 50, 150, 250);
+
+		fill(0);
+		textAlign(LEFT, CENTER);
+		textSize(12);
+		text("Earthquake Key", 50, 75);
+
+		fill(255, 0 , 0); //red
+		//ellipse(50, 125, 15, 15);
+		float x = 50;
+		float y = 100;
+		float side = 10;
+		triangle(x, y, x+(side/2f), y-8.25f, x+side, y);
+
+		fill(255, 255, 255);
+		ellipse(x+(side/2f), y+15, 10, 10);
+
+		//fill(color(255, 255, 255));
+		rect(x, y+30, 10, 10);
+		
+		fill(0,0,0);
+		textSize(10);
+		text("City Marker", x+20, y-5);
+		text("Land Quake", x+20, y+15);
+		text("Ocean Quake", x+20, y+35);
+
+		textSize(12);
+		text("Size -- Magnitude", 50, y+60);
+
+		fill(252,252,6);
+		ellipse(x+(side/2f), y+85, 10, 10);
+
+		fill(0,0,255);
+		ellipse(x+(side/2f), y+105, 10, 10);
+
+		fill(255, 0, 0);
+		ellipse(x+(side/2f), y+125, 10, 10);
+
+		textSize(10);
+		fill(0, 0, 0);
+		text("Shallow", x+20, y+85);
+		text("Intermediate", x+20, y+105);
+		text("Deep", x+20, y+125);
+
+
+		fill(255, 255, 255);
+		ellipse(x+(side/2f), y+145, 10, 10);
+		line(x-2, y+138, x+12, y+152);
+		line(x+12, y+138, x-2,y+152);
+
+		fill(0, 0, 0);
+		text("Past Day", x+20, y+145);
 	}
 
 	
